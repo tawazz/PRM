@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "slim/slim-skeleton": "2.1",
+        "slim/views": "0.1.*",
+        "phpmailer/phpmailer": "^5.2",
+        "nesbot/carbon": "^1.20"
+    },
+    "autoload": {
+        "classmap": [
+            "app/models",
+            "app/Middleware"
+        ]
+    }
+}
