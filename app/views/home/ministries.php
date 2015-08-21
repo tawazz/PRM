@@ -60,13 +60,13 @@
         <div class="col-lg-12">
 
             <ul id="myTab" class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#service-one" data-toggle="tab"><i class="fa fa-male"></i> Mens Fellowship</a>
+                <li class="active"><a href="#service-one" data-toggle="tab"><i class="fa fa-male"></i> Men's Fellowship</a>
                 </li>
-                <li class=""><a href="#service-two" data-toggle="tab"><i class="fa fa-female"></i> Ladies Fellowship</a>
+                <li class=""><a href="#service-two" data-toggle="tab"><i class="fa fa-female"></i> Woman's Fellowship</a>
                 </li>
                 <li class=""><a href="#service-three" data-toggle="tab"><i class="fa fa-users"></i> Youth</a>
                 </li>
-                <li class=""><a href="#service-four" data-toggle="tab"><i class="fa fa-child"></i> Sunday School</a>
+                <li class=""><a href="#service-four" data-toggle="tab"><i class="fa fa-child"></i>Children Ministry</a>
                 </li>
             </ul>
 

@@ -5,6 +5,9 @@
       })->name('admin');
 
        $app->get('/admin/profile',$signedIn,function() use($app){
+           header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+           header("Pragma: no-cache"); // HTTP 1.0.
+           header("Expires: 0"); // Proxies.
            $app->render('admin/profile.php');
        })->name('profile');
 
@@ -15,6 +18,10 @@
        $app->get('/admin/settings',$signedIn,function() use($app){
            $app->render('admin/settings.php');
        })->name('settings');
+
+        $app->get('/admin/users',$signedIn,function() use($app){
+           $app->render('admin/users.php',["users"=>$app->User->find('all')]);
+       })->name('users');
 
        //post data
 
@@ -34,7 +41,9 @@
         if($app->posts->validate($_POST)){
             $_POST['user_id']= $app->auth->user_id;
             $post_id = $app->posts->save($_POST);
-            $app->images->saveImages($post_id,$_FILES['img']);
+            if(!empty($_FILES['img'][0]['name'])){
+                $app->images->saveImages($post_id,$_FILES['img']);
+            }
             $app->flash("global","Post added");
             $app->response->redirect('/admin');
         }else{

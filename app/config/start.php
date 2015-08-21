@@ -1,8 +1,10 @@
 <?php
   session_start();
   require 'vendor/autoload.php';
-  require 'tazzy_helpers/tazzy_autoload/autoload.php';
+  require 'tazzy_helpers/autoload.php';
   use Slim\Slim;
+  use Tazzy\Database;
+  use Tazzy\Helpers;
 
   $app = new Slim([
     'view'=> new \Slim\Views\Twig()

@@ -1,6 +1,12 @@
 <?php
   $app->get('/',function() use ($app){
-    $app->render('home/home.php');
+      $conditions = [
+      'limit'=>[0,3],
+      'order'=>['date'=>'desc'],
+      'where'=>['date','>=',date('Y/m/d')],
+      ];
+      $events = $app->events->find('all',$conditions);
+    $app->render('home/home.php',['events'=>$events]);
   })->name('home');
 
   $app->get('/about',function() use ($app){
@@ -13,9 +19,6 @@ $app->get('/ministries',function() use ($app){
 
 $app->get('/resources',function() use ($app){
     $posts = $app->posts->find('all',['order'=>['post_id'=>'desc']]);
-    /*for($i=0;$i<count($posts);$i++){
-        $posts[$i]->User = $app->User->find('first',['where'=>['user_id','=',$posts[$i]->user_id]]);
-    }*/
     $app->render('home/resources.php',['posts'=> $posts]);
   })->name('resources');
 

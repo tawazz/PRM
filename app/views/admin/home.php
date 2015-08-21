@@ -21,7 +21,7 @@
                                             </div>
                                             <div class="form-group">
                                             <label for="body">body</label>
-                                            <textarea class="form-control" name="body"></textarea>
+                                            <textarea class="form-control tinymce" name="body"></textarea>
                                             </div>
                                             <div class="form-group">
                                                 <div id="upload" class="upload col-sm-12">

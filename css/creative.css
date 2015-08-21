@@ -503,3 +503,12 @@ body {
   top: 0;
   left: 0;
 }
+.well {
+  color: #555;
+}
+.truncate {
+  max-height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

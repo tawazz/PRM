@@ -30,7 +30,7 @@
         <script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
         <script type="text/javascript">
             tinymce.init({
-                    selector: "textarea"
+                    selector: ".tinymce"
                 });
         </script>
 
@@ -92,7 +92,10 @@
                             <a href="/admin/messages"><i class="fa fa-envelope fa-fw"></i> Messages</a>
                         </li>
                         <li>
-                            <a href="/admin/settings"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                            <a href="/admin/settings"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a href="/admin/users"><i class="fa fa-users fa-fw"></i> Users</a>
                         </li>
                     </ul>
                 </div>

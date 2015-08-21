@@ -9,7 +9,7 @@
                 </object>
                 </div>
                 <hr>
-                <p>Join us Sunday mornings at 10:00am to 12:20pm</p>
+                <p>Join us Sunday mornings at 10:00am to 12:30pm</p>
                 <br><br><br><br>
                 <a href="#about" class="btn btn-circle page-scroll">
                     <i class="fa fa-angle-double-down animated"></i>
@@ -21,7 +21,7 @@
       <div class="container">
           <div class="row">
               <div class="col-lg-12 text-center">
-                  <h2 class="section-heading">Engage. Equip. Empower.</h2>
+                  <h2 class="section-heading">Bringing Divine Empowerment To The Nation</h2>
                   <hr class="light">
               </div>
           </div>
@@ -31,29 +31,36 @@
               <div class="col-sm-4 text-center">
                   <div class="well">
                       <h3 class="text-primary">Welcome</h3>
-                      <p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <p>
+                          Our church is called the "Pentecostal Revival Ministries". We see ourselves as a family of God's people and we relate with each other
+                          in a way that reflect God's idea of the community of His people. <i>Eph 3:15</i>
+                      </p>
+                      <p>
+                        The Lord and foundation of our church is the <b><u>Lord Jesus Christ </u></b>.<i>Matt 16:18; 1 Cor 3:10-11; 1 Peter 2:25; 1 Peter 5:4</i>
+                      </p>
+                      <p>
+                          Our teaching , preaching, worship and way of life is based only on the Bible, the word of God and not on tradition or religious practices. 
+                          <i> Gal 1:8; 2 Tim 3:15-17; Matt 15:9; James 1:22;</i>
+                      </p>
                   </div>
               </div>
               <div class="col-sm-4 text-center">
                   <div class="well">
-                      <h3 class="text-primary">2015 Theme</h3>
-                      <p class="text-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      <h3 class="text-primary">Our Mission</h3>
+                      <p>We were called by God to <b>Bring The Sword And Set For War</b> to set the captives free by getting them young, healing the land and restoring life</p>
                   </div>
               </div>
               <div class="col-sm-4 text-center">
                   <div class="well">
                       <h3 class="text-primary">Upcoming Events</h3>
                       <div class="list-group">
-                        <a href="#" class="list-group-item">
-                          <h4 class="text-primary text-capitalize">youth meeting</h4>
-                          <p class="list-group-item-text">Saturday, 18 July 2015 2pm-6pm Centenary Park, Corner Barker St/Daly St, Belmont, WA 6104.</p>
-                        </a>
-                        <a href="#" class="list-group-item">
-                          <h4 class="text-primary text-capitalize">youth meeting</h4>
-                          <p class="list-group-item-tex">Saturday, 18 July 2015 2pm-6pm Centenary Park, Corner Barker St/Daly St, Belmont, WA 6104.</p>
-                        </a>
+                          {% for event in events %}
+                            <a href="#" class="list-group-item">
+                              <h4 class="text-primary text-capitalize">{{event.name}}</h4>
+                              <div class="truncate">{{event.details|raw }}</div>
+                            </a>
+                          {% endfor %}
                       </div>
-                      <p class="text-primary"></p>
                   </div>
               </div>
           </div>

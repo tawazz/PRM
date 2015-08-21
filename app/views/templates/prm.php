@@ -13,12 +13,6 @@
         <meta name="author" content="">
         <title></title>
         {% include "parts/css.php" %}
-        <script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
-        <script type="text/javascript">
-            tinymce.init({
-                    selector: "textarea"
-                });
-        </script>
     </head>
     <body>
         {% include "parts/prm-nav.php" %} 

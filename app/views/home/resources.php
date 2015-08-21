@@ -1,19 +1,20 @@
 {% extends 'templates/prm.php' %}
 
 {% block content %}
+   <div class="row">
+    <div class="col-lg-12" style="margin-top: 50px;">
+        <h2 class="page-header">Resources</h2>
+    </div>
     <div class="row" style="margin-top:50px">
     <!-- Blog Entries Column -->
-    <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-6 col-md-offset-3">
      {% for post in posts %}
-            <h2>
-                {{ post.id }}
-                <a href="resources/view/{{ post.post_id }}">{{ post.title }}</a>
-            </h2>
-            <p class="lead">
-                by <a href="">{{post.users.username}}</a>
-            </p>
-            <p><i class="fa fa-clock-o"></i> Posted on {{ post.created }} </p>
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h4 class="text-primary">{{ post.users.username }}-<small>{{ post.created|date("M/d/Y") }}</small></h4>
+                {{  post.body|raw }}
+                <div class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             {% if post.images|length > 1 %}
             <ol class="carousel-indicators">
@@ -62,14 +63,11 @@
             </a>
             {% endif %}
         </div>
-        <p>{{  post.body|raw }}</p>
-        <a class="btn btn-primary" href="resources/view/{{post.post_id }}">Read More <i class="fa fa-angle-right"></i></a>
-
-        <hr>
+             
+             </div>
+          </div>
+        
    {% endfor %}
-    </div>
-    <div class="col-md-4">
-
     </div>
 </div>
 {% endblock %}
